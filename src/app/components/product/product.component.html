@@ -8,7 +8,7 @@
     <p>
       {{ product.price | currency : "EUR" }}
     </p>
-    <a class="btn btn-outline-danger mx-1">Like</a>
+    <a (click)="addToFavs(product)" class="btn btn-outline-danger mx-1">Like</a>
     <a (click)="addProductToCart(product)" class="btn btn-outline-primary mx-1"
       >Buy</a
     >

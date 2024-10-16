@@ -10,7 +10,7 @@ import { iJsonResponse } from '../interfaces/i-json-response';
 export class ProductService {
   apiUrl: string = 'https://dummyjson.com/products';
 
-  favourites$ = new ReplaySubject<iProduct[]>();
+  favourites$ = new ReplaySubject<iProduct>();
 
   cart$ = new Subject<iProduct>();
 
@@ -26,7 +26,7 @@ export class ProductService {
     this.cart$.next(product);
   }
 
-  //   addToFavourites(product: iProduct) {
-  //     this.favourites$.next(product);
-  //   }
+  addToFavourites(product: iProduct) {
+    this.favourites$.next(product);
+  }
 }

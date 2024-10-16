@@ -15,4 +15,8 @@ export class ProductComponent {
   addProductToCart(product: iProduct) {
     this.productSvc.addToCart(product);
   }
+
+  addToFavs(product: iProduct) {
+    this.productSvc.addToFavourites(product);
+  }
 }
