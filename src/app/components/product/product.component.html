@@ -1,12 +1,16 @@
 <div class="card mt-5" *ngIf="product">
+  <img [src]="product.thumbnail" [alt]="product.title" />
   <div class="card-body">
     <h5 class="card-title">{{ product.title }}</h5>
     <p class="card-text">
       {{ product.description }}
     </p>
     <p>
-      {{ product.price }}
+      {{ product.price | currency : "EUR" }}
     </p>
-    <a class="btn btn-outline-primary d-block w-50 mx-auto">Details</a>
+    <a class="btn btn-outline-danger mx-1">Like</a>
+    <a (click)="addProductToCart(product)" class="btn btn-outline-primary mx-1"
+      >Buy</a
+    >
   </div>
 </div>

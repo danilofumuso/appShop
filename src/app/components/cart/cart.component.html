@@ -1,0 +1,30 @@
+<ng-template #content let-offcanvas>
+  <div class="offcanvas-header">
+    <h4 class="offcanvas-title">Products List</h4>
+    <button
+      type="button"
+      class="btn-close"
+      aria-label="Close"
+      (click)="offcanvas.dismiss('Cross click')"
+    ></button>
+  </div>
+  <div class="offcanvas-body">
+    <p *ngFor="let product of cart">
+      {{ product.title }} -
+      {{ product.price | currency : "EUR" }}
+    </p>
+    <div class="text-end">
+      <button
+        type="button"
+        class="btn btn-outline-danger"
+        (click)="offcanvas.close('Close click')"
+      >
+        Close
+      </button>
+    </div>
+  </div>
+</ng-template>
+
+<button class="btn btn-lg btn-outline-warning" (click)="openEnd(content)">
+  <i class="bi bi-cart4"></i>
+</button>

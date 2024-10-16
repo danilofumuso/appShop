@@ -11,24 +11,24 @@ export interface iProduct {
   brand: string;
   sku: string;
   weight: number;
-  dimensions: Dimensions;
+  dimensions: iDimensions;
   warrantyInformation: string;
   shippingInformation: string;
   availabilityStatus: string;
-  reviews: Review[];
+  reviews: iReview[];
   returnPolicy: string;
   minimumOrderQuantity: number;
-  meta: Meta;
+  meta: iMeta;
   thumbnail: string;
   images: string[];
 }
-export interface Dimensions {
+export interface iDimensions {
   width: number;
   height: number;
   depth: number;
 }
 
-export interface Review {
+export interface iReview {
   rating: number;
   comment: string;
   date: string;
@@ -36,7 +36,7 @@ export interface Review {
   reviewerEmail: string;
 }
 
-export interface Meta {
+export interface iMeta {
   createdAt: string;
   updatedAt: string;
   barcode: string;

@@ -8,8 +8,8 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { HomeComponent } from './pages/home/home.component';
 import { PreferitiComponent } from './pages/preferiti/preferiti.component';
 import { provideHttpClient } from '@angular/common/http';
-import { CardComponent } from './components/card/card.component';
 import { ProductComponent } from './components/product/product.component';
+import { CartComponent } from './components/cart/cart.component';
 
 @NgModule({
   declarations: [
@@ -17,8 +17,8 @@ import { ProductComponent } from './components/product/product.component';
     NavbarComponent,
     HomeComponent,
     PreferitiComponent,
-    CardComponent,
     ProductComponent,
+    CartComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, NgbModule],
   providers: [provideHttpClient()],
